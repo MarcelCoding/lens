@@ -1,0 +1,10 @@
+[package]
+name = "entity"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sea-orm = { workspace = true, features = ["macros", "with-uuid", "with-time"] }
+serde = { workspace = true, features = ["derive"] }
+uuid = { workspace = true, features = ["serde"] }
+time = { workspace = true, features = ["serde"] }

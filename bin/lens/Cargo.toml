@@ -1,0 +1,25 @@
+[package]
+name = "lens"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { workspace = true, features = ["std", "color", "help", "usage", "error-context", "suggestions", "derive", "env"] }
+sea-orm = { workspace = true, features = ["sqlx-postgres", "runtime-tokio-rustls"] }
+tokio = { workspace = true, features = ["macros", "rt-multi-thread", "net", "fs"] }
+axum = { workspace = true, features = ["tokio", "http1", "json", "query"] }
+image = { workspace = true, features = ["gif", "jpeg", "png", "webp"] }
+tracing = { workspace = true, features = ["release_max_level_info"] }
+tracing-subscriber = { workspace = true, features = ["fmt", "ansi"] }
+time = { workspace = true, features = ["serde", "formatting"] }
+tower-http = { workspace = true, features = ["trace"] }
+serde = { workspace = true, features = ["derive"] }
+anyhow = { workspace = true, features = ["std"] }
+uuid = { workspace = true, features = ["serde"] }
+migration = { path = "../../lib/migration" }
+entity = { path = "../../lib/entity" }
+utils = { path = "../../lib/utils" }
+url = { workspace = true }
+mime_guess = "2.0"
+mime = "0.3"
+etag = "4.0"
